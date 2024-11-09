@@ -1,0 +1,34 @@
+<html>
+<head>
+<script>
+var numOne, numTwo, res, temp;
+function fun()
+{
+  numOne = parseInt(document.getElementById("one").value);
+  numTwo = parseInt(document.getElementById("two").value);
+  if(numOne && numTwo)
+  {
+    temp = document.getElementById("res");
+    temp.style.display = "block";
+    res = numOne + numTwo;
+    document.getElementById("add").value = res;
+    res = numOne - numTwo;
+    document.getElementById("subtract").value = res;
+  }
+}
+</script>
+</head>
+<body>
+
+    <p>Enter First Number: 
+    <input type="text"  id="one">
+    <br/>
+    Enter Second Number:
+    <input id="two"></p>
+    <p><button onclick="fun()">Add, Subtract</button></p>
+    <p id="res" style="display:none;">
+    Addition Result = <input id="add"><br/><br/>
+    Subtraction Result = <input id="subtract"><br/><br/>
+    </p>
+</body>
+</html>

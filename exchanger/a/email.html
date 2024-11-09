@@ -1,0 +1,27 @@
+<html>
+  <body align="center" text="green" font="arial">
+
+      <h1>Enter email id :</h1>
+      <input type="text" id="chkemailid" />
+      <input type="button" value="validate email id" onclick="validateEmail()"/>
+
+    <script>
+      function validateEmail() {
+        try {
+          emailField = document.getElementById("chkemailid");
+          var reg =
+            /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+          if (reg.test(emailField.value) == false) {
+            alert("Invalid Email Address");
+            return false;
+          } else {
+            alert("Thank you for entereing Valid Email...");
+            return true;
+          }
+        } catch (Exception) {
+          alert(Exception.message);
+        }
+      }
+    </script>
+  </body>
+</html>
